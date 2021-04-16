@@ -1,0 +1,117 @@
+#page-landing {
+  background: linear-gradient(135deg, #00FFB2 0%, #9E00FF 98.44%) no-repeat;
+
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+  /* align-items: center; alinha apenas em cima e em baixo */
+}
+
+#container {
+  margin: auto;
+  width: min(90%, 112rem); /*aplica o mínimo entre essas duas condições */
+} /*esta alinhando não só as laterais mais em cima e em baixo também, é tipo uma box*/
+
+/* vai buscar os elementos abaixo, e dentro do visit localizará o elemento p */
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(4rem, 8vw, 8.4rem);
+}
+
+.visit a {
+  /* aqui vamos alterar os atributos do botão */
+  width: 9.4rem;
+  height: 9.4rem;
+  background: #30FFBC;
+
+  border: none;
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center; /*alinha no eixo X*/
+  justify-content: center; /*alinha no eixo Y*/
+
+  margin: 0 auto; /* alinha no eixo X e eixo Y se um dos elementos anteriores for display flex*/
+
+  transition: background 300ms;
+
+  animation-delay: 200ms;
+}
+
+.visit a:hover {
+  background: #96feff;
+}
+
+.visit a {
+  animation-delay: 250ms;
+}
+
+/* Desktop version */
+@media (min-width: 760px) {
+  #container {
+    padding: 5rem 2rem;
+
+    /* shorthand background: image repeat position / size */
+    background: url(https://cdn.pixabay.com/photo/2019/04/10/11/56/watercolour-4116932_960_720.png) no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  main h1 {
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+    width: min(300px, 80%);
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+
+  .visit a {
+    margin: initial;
+  }
+
+}
