@@ -45,7 +45,7 @@ Esses códigos foram desenvolvidos com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-🚀 O repositório tem como propósito compartilhar os códigos desenvolvidos no curso Java Servlet: Fundamentos da programação web Java de modo a obter um conhecimento essencial no desenvolvimento web com Java e Servlets.
+🚀 O repositório tem como propósito compartilhar o conhecimento absorvido juntamente com os códigos desenvolvidos no curso Java Servlet: Fundamentos da programação web Java proporcionado pela Alura.
 
 ⚡️ Criei resumos e anotações no Notion das partes relevantes com a minha visão de aluno. [Clique aqui para conferir.](https://www.notion.so/Java-Servlets-038925db228145c4b63578a65bfeb487)
 
