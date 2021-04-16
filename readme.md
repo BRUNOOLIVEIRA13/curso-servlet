@@ -34,7 +34,7 @@
 Esses códigos foram desenvolvidos com as seguintes tecnologias:
 
 - [Java™ Platform, Standard Edition 8](https://docs.oracle.co/javase/8/docs/api/index.html)
-- [Apache Tomcat V9](hhttps://tomcat.apache.org/tomcat-9.0-doc/index.html)
+- [Apache Tomcat V9](https://tomcat.apache.org/tomcat-9.0-doc/index.html)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Maven](https://maven.apache.org/guides/index.html)
@@ -51,9 +51,9 @@ Esses códigos foram desenvolvidos com as seguintes tecnologias:
 
 ✨ Servlet é um objeto que pode ser acionado através de uma requisição do protocolo HTTP. Essa interação é possibilitada pelo Tomcat, e precisa seguir algumas regras, como estender, sobrescrever os métodos doGet(), doPost() e service(), e fazer o mapeamento para indicar a URL.
 
-👾 O foco foi realmente nos servlets e no back-end, aplicando o C.R.U.D (Create, Read, Update, Delete), usando uma classe banco, que simula um banco de dados a principio, adicionalmente ao que foi ensinado no curso, fiz um front-end básico na landing page (index) e criei um atributo adicional 'CNPJ' com a propriedade readonly. Que espero com os próximos cursos, conseguir incluir formas de validação no campo.
+👾 O foco foi realmente nos servlets e no back-end, aplicando o C.R.U.D (Create, Read, Update, Delete), usando uma classe banco, que simula um banco de dados a princípio, adicionalmente ao que foi ensinado no curso, fiz um front-end básico na landing page (index) e criei um atributo adicional 'CNPJ' com a propriedade readonly. Que espero com os próximos cursos, conseguir incluir formas de validação no campo.
 
-📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/).
+📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
 
 <br>
 
