@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>testando</artifactId>
+    <artifactId>gerenciador</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>testando</name>
+    <name>gerenciador</name>
     <packaging>war</packaging>
 
     <properties>

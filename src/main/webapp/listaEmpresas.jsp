@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="com.example.testando.Empresa" %>
+<%@ page import="com.gerenciador.servlet.Empresa" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Bruno
