@@ -1,11 +1,13 @@
 package com.gerenciador.servlet;
 
+import com.gerenciador.model.Banco;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "RemoveEmpresaServlet", value = "/removeEmpresa")
+//@WebServlet(name = "RemoveEmpresaServlet", value = "/removeEmpresa")
 public class RemoveEmpresaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,11 +21,6 @@ public class RemoveEmpresaServlet extends HttpServlet {
         banco.removeEmpresa(id);
 
         response.sendRedirect("listaEmpresas");
-
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

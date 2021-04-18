@@ -1,29 +1,25 @@
-package com.gerenciador.servlet;
+package com.gerenciador.action;
 
 import com.gerenciador.model.Banco;
 import com.gerenciador.model.Empresa;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//@WebServlet(name = "NovaEmpresaServlet", urlPatterns = "/novaEmpresa")
-public class NovaEmpresaServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+public class NovaEmpresa {
 
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        System.out.println("Cadastrando empresa...");
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String nomeEmpresa = request.getParameter("nome");
         String paramData = request.getParameter("data");
         String paramCnpj = request.getParameter("cnpj"); //recebe valor do cnpj e salva
+
+        System.out.println("Cadastrando nova empresa: " + nomeEmpresa);
 
         Date dataAbertura = null;
         try {
@@ -43,14 +39,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 
         request.setAttribute("empresa", novaEmpresa.getNome());
 
-        response.sendRedirect("listaEmpresas");
-
-//        // chamar a página JPS
-//        RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
-//        // vai carregar o atributo em comum na requisição a ser usado na JSP
-//        request.setAttribute("empresa", novaEmpresa.getNome());
-//        // Vai levar a requisição e a a nossa resposta - como se fosse um 'motoboy'.
-//        rd.forward(request, response);
+        response.sendRedirect("browse?action=ListaEmpresas");
 
     }
 }

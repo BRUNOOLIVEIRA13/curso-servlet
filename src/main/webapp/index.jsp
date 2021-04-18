@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,7 +40,7 @@
                 <a href="formNovaEmpresa.jsp" title="Adicionar Empresas" class="animate-up">
                     Adicionar Empresa
                 </a>
-                <a href="listaEmpresas" title="Listar Empresas" class="animate-up">
+                <a href="browse?action=ListaEmpresas" title="Listar Empresas" class="animate-up">
                     Listar Empresas
                 </a>
             </section>

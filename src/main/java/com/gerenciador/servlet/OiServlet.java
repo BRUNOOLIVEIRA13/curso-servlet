@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "oiServlet", urlPatterns = "/oi")
+//@WebServlet(name = "oiServlet", urlPatterns = "/oi")
 public class OiServlet extends HttpServlet {
     //OI
     @Override

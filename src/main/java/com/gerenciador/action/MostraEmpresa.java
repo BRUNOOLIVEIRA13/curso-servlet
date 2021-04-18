@@ -1,18 +1,19 @@
-package com.gerenciador.servlet;
+package com.gerenciador.action;
 
 import com.gerenciador.model.Banco;
 import com.gerenciador.model.Empresa;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet(name = "MostraEmpresaServlet", value = "/mostraEmpresa")
-public class MostraEmpresaServlet extends HttpServlet {
+public class MostraEmpresa {
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("Mostrando dados da empresa...");
+
         // Precisa requisitar os parametros e converter para inteiro
         String paramId = request.getParameter("id");
         Integer id = Integer.valueOf(paramId);
@@ -31,5 +32,4 @@ public class MostraEmpresaServlet extends HttpServlet {
         rd.forward(request, response);
 
     }
-
 }

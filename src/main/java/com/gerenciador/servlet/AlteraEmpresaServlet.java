@@ -1,5 +1,8 @@
 package com.gerenciador.servlet;
 
+import com.gerenciador.model.Banco;
+import com.gerenciador.model.Empresa;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -8,7 +11,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "AlteraEmpresaServlet", value = "/alteraEmpresa")
+//@WebServlet(name = "AlteraEmpresaServlet", value = "/alteraEmpresa")
 public class AlteraEmpresaServlet extends HttpServlet {
 
     @Override
