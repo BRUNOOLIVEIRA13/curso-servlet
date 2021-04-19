@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class MostraEmpresa {
+public class MostraEmpresa implements Acao {
 
-    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Mostrando dados da empresa...");
+    public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // Precisa requisitar os parametros e converter para inteiro
         String paramId = request.getParameter("id");
@@ -22,14 +21,15 @@ public class MostraEmpresa {
         Banco banco = new Banco();
         Empresa empresa = banco.searchById(id);
 
-        System.out.println(empresa.getNome());
+        System.out.println("Mostrando dados da empresa: " + empresa.getNome());
 
         // Definindo o atributo a ser enviado
         request.setAttribute("empresa", empresa);
 
-        // Definindo a rota e enviando
-        RequestDispatcher rd = request.getRequestDispatcher("/formAlteraEmpresa.jsp");
-        rd.forward(request, response);
+//        // Definindo a rota e enviando
+//        RequestDispatcher rd = request.getRequestDispatcher("/formAlteraEmpresa.jsp");
+//        rd.forward(request, response);
 
+        return "forward:formAlteraEmpresa.jsp";
     }
 }

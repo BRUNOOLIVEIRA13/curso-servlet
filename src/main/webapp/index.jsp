@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="public/css/main.css" />
     <link rel="stylesheet" href="public/css/page-landing.css" />
+    <link rel="stylesheet" href="public/css/animations.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -37,7 +38,7 @@
             <section class = "visit">
                 <p class="animate-up">Seja bem vind@, espero que goste!</p>
 
-                <a href="formNovaEmpresa.jsp" title="Adicionar Empresas" class="animate-up">
+                <a href="browse?action=AdicionarEmpresa" title="Adicionar Empresas" class="animate-up">
                     Adicionar Empresa
                 </a>
                 <a href="browse?action=ListaEmpresas" title="Listar Empresas" class="animate-up">

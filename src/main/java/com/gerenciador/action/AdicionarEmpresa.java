@@ -7,23 +7,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Comparator;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class ListaEmpresas implements Acao {
+public class AdicionarEmpresa implements Acao {
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("Listando empresas ...");
 
-        Banco banco = new Banco();
-        List<Empresa> lista = banco.getEmpresas();
-
-        lista.sort(Comparator.comparing(Empresa::getNome));
-
-        request.setAttribute("empresas", lista);
-
-        return "forward:listaEmpresas.jsp";
+        return "forward:formNovaEmpresa.jsp";
 
     }
-
 }

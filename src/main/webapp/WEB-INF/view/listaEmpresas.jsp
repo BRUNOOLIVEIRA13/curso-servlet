@@ -15,7 +15,7 @@
     <title>Gerenciador - Lista de Empresas</title>
 </head>
 <body>
-<a href="index.jsp">Voltar</a>
+<a href="../../gerenciador/">Voltar</a>
 <br/><br/>
 
     <c:if test = "${not empty empresa}">
@@ -23,14 +23,14 @@
     </c:if>
     <br/>
 
-    Lista de empresas: <br/>
+<strong> Lista de empresas em ordem alfabética: </strong><br/>
     <ul>
         <c:forEach var="empresa" items="${empresas}">
               <%-- empresa.getNome() é equivalente a linha abaixo --%>
             <li>
-                    ${empresa.nome} - ${empresa.cnpj} - <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>
-                    <a href="./browse?action=MostraEmpresa&id=${ empresa.id }">Editar</a>
-                    <a href="./browse?action=RemoveEmpresa&id=${ empresa.id }">Remover</a>
+                    ${empresa.nome} - CNPJ: ${empresa.cnpj} - Abertura de Conta:   <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>
+                    <a href="./browse?action=MostraEmpresa&id=${ empresa.id }">Editar </a>
+                    <a href="./browse?action=RemoveEmpresa&id=${ empresa.id }">| Remover</a>
             </li>
 
         </c:forEach>

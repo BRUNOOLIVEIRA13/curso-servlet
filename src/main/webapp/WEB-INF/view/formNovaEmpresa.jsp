@@ -10,7 +10,7 @@
     <title>Formulario de Cadastro</title>
 </head>
 <body>
-<a href="index.jsp">Voltar</a>
+<a href="../../gerenciador/">Voltar</a>
 <br/><br/>
 
     <form action="${ linkMainServlet }" method="post">
