@@ -6,8 +6,10 @@ import java.util.List;
 public class Banco {
 
     private static List<Empresa> empresaList = new ArrayList<>();
+    private static List<Usuario> listaUsuarios = new ArrayList<>();
     private static Integer chaveSequencial = 1;
 
+    // simula o comportamento de armazenar duas empresas e dois usuários
     static {
         Empresa empresa = new Empresa();
         empresa.setId(chaveSequencial++);
@@ -19,6 +21,16 @@ public class Banco {
         empresa2.setCnpj("888.444.222/0007-11");
         empresaList.add(empresa);
         empresaList.add(empresa2);
+
+        Usuario user = new Usuario();
+        user.setLogin("bruno@gerenciador.com");
+        user.setSenha("senha");
+        Usuario user2 = new Usuario();
+        user2.setLogin("admin");
+        user2.setSenha("1234");
+
+        listaUsuarios.add(user);
+        listaUsuarios.add(user2);
     }
 
     public void adiciona(Empresa novaEmpresa) {
@@ -39,6 +51,16 @@ public class Banco {
         for ( Empresa empresa : empresaList) {
             if (empresa.getId() == id) {
                 return empresa;
+            }
+        }
+        return null;
+    }
+
+    // valida a credencial se o que foi digitado está cadastrado
+    public Usuario validateCredentials(String login, String senha) {
+        for (Usuario user : listaUsuarios) {
+            if (user.ehIgual(login, senha)) {
+                return user;
             }
         }
         return null;

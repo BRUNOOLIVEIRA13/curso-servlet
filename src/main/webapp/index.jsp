@@ -44,6 +44,9 @@
                 <a href="browse?action=ListaEmpresas" title="Listar Empresas" class="animate-up">
                     Listar Empresas
                 </a>
+                <a href="browse?action=LoginForm" title="Login" class="animate-up">
+                    Login
+                </a>
             </section>
         </main>
     </div>
