@@ -6,6 +6,7 @@ import com.gerenciador.model.Usuario;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class Login implements Acao {
@@ -23,8 +24,11 @@ public class Login implements Acao {
 
         if (user != null) {
             System.out.println("Usuário autenticado.");
-            return "redirect:browse?action=ListaEmpresas";
 
+            HttpSession session = request.getSession();
+            session.setAttribute("userSession", user);
+
+            return "redirect:browse?action=ListaEmpresas";
         } else {
             return "redirect:browse?action=LoginForm";
         }
