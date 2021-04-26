@@ -10,9 +10,7 @@
     <title>Alterar Cadastro</title>
 </head>
 <body>
-
-<a href="../../gerenciador/">Voltar</a>
-<br/><br/>
+    <c:import url="logout-parcial.jsp" />
 
     <form action="${ linkMainServlet }" method="post">
 

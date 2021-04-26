@@ -15,19 +15,14 @@
     <title>Gerenciador - Lista de Empresas</title>
 </head>
 <body>
-<a href="../../gerenciador/">Voltar</a>
-<br/>
+    <c:import url="logout-parcial.jsp" />
 
     <c:if test = "${not empty empresa}">
         Empresa ${ empresa } cadastrada com Sucesso!!!
     </c:if>
-    <br/>
 
-    <br>
-    Usuário Logado: ${userSession.login}
-    <br>
-    <br>
-    <br>
+    Usuário Logado: <strong>${userSession.login}</strong>
+    <br><br><br>
 
 <strong> Lista de empresas em ordem alfabética: </strong><br/>
     <ul>

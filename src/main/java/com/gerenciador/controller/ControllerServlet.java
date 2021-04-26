@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "ControllerServlet", value = "/browse") //entrada única
@@ -16,6 +17,17 @@ public class ControllerServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String paramAction = request.getParameter("action");
+
+        //Verifica se possui um JSessionID (para saber se está logado), caso não tenha uma, será redirecionado para criar.
+        HttpSession session = request.getSession();
+        boolean userNotLogged = (session.getAttribute("userSession") == null);
+        // Verifica se a página que está acessando é uma das que não precisam de autenticação, que são todas, exceto o form de login
+        boolean ehUmaAcaoProtegida = !(paramAction.equals("Login") || paramAction.equals("LoginForm"));
+
+        if(ehUmaAcaoProtegida && userNotLogged) {
+            response.sendRedirect("browse?action=LoginForm");
+            return;
+        }
 
         String nomeDaClasse = "com.gerenciador.action." + paramAction;
         //Carrega a classe com o nome da String, cria uma unica vez a classe e deixa em memória, e devolve a classe

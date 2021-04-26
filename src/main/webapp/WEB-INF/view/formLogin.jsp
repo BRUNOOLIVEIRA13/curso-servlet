@@ -10,8 +10,8 @@
     <title>Login</title>
 </head>
 <body>
-<a href="../../gerenciador/">Voltar</a>
-<br/><br/>
+    <a href="../../gerenciador/">Voltar</a>
+    <br/><br/>
 
     <form action="${ linkMainServlet }" method="post">
 
