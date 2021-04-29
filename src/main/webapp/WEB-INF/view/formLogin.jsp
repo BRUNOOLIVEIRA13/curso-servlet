@@ -8,22 +8,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+
 </head>
 <body>
-    <a href="../../gerenciador/">Voltar</a>
-    <br/><br/>
+    <button onclick="history.back()">Voltar</button>
 
-    <form action="${ linkMainServlet }" method="post">
+    <br/><br/><br/><br/>
+    <div class="input-block">
+        <form action="${ linkMainServlet }" method="post">
+            Login: <input type="text" name="login" /> <br>
+            Senha: <input type="password" name="senha" />
+            <input type="hidden" name="action" value="Login" /> <br> <br>
 
-        E-mail: <input type="text" name="login" />
-        Senha: <input type="password" name="senha" />
-        <input type="hidden" name="action" value="Login" />
+            <button type="submit" class="primary-button">ENTRAR</button>
 
-        <input type="submit">
-
-    </form>
+        </form>
+    </div>
 <p></p>
-<br/>
-<footer>Vou ficar devendo o front end dessa pagina por hora... </footer>
+<br/><br/>
+<footer> Login: admin | senha: 1234 </footer>
 </body>
 </html>

@@ -14,6 +14,7 @@ import java.util.List;
 @WebServlet(name = "EmpresasService", value = "/empresas")
 public class EmpresasService extends HttpServlet {
 
+    //API para extrair os dados em formato xml e json das empresas
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -12,17 +12,20 @@
 <body>
     <c:import url="logout-parcial.jsp" />
 
-    <form action="${ linkMainServlet }" method="post">
+    <fieldset>
+        <legend>Alterar Dados</legend>
+        <form action="${ linkMainServlet }" method="post">
 
-        Nome: <input type="text" name="nome" value="${empresa.nome}"/>
-        CNPJ: <input type="text" name="cpng" value="${empresa.cnpj }" readonly>
-        Data de Abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />
+            Nome: <input type="text" name="nome" value="${empresa.nome}"/>
+            CNPJ: <input type="text" name="cpng" value="${empresa.cnpj }" readonly>
+            Data de Abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />
 
-        <input type="hidden" name="id" value="${empresa.id}" />
-        <input type="hidden" name="action" value="AlteraEmpresa" />
-        <input type="submit">
+            <input type="hidden" name="id" value="${empresa.id}" />
+            <input type="hidden" name="action" value="AlteraEmpresa" />
+            <button type="submit">Confirmar Alteração</button>
 
-    </form>
+        </form>
+    </fieldset>
 
 </body>
 </html>

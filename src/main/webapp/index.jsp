@@ -45,7 +45,7 @@
                     Listar Empresas
                 </a>
                 <a href="browse?action=LoginForm" title="Login" class="animate-up">
-                    Login
+                    <img src="<c:url value="/public/images/arrow.svg"/>" alt="Ir para o login" />
                 </a>
             </section>
         </main>

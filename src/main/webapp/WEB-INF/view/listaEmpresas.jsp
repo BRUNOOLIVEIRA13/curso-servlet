@@ -21,23 +21,33 @@
         Empresa ${ empresa } cadastrada com Sucesso!!!
     </c:if>
 
-    Usuário Logado: <strong>${userSession.login}</strong>
+    <fieldset>
+        <legend>Usuário Logado:</legend>
+            <strong>${userSession.login}</strong>
+    </fieldset>
     <br><br><br>
 
-<strong> Lista de empresas em ordem alfabética: </strong><br/>
+<fieldset>
+    <legend><strong> Lista de empresas em ordem alfabética: </strong></legend>
     <ul>
         <c:forEach var="empresa" items="${empresas}">
               <%-- empresa.getNome() é equivalente a linha abaixo --%>
             <li>
-                    ${empresa.nome} - CNPJ: ${empresa.cnpj} - Abertura de Conta:   <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>
-                    <a href="./browse?action=MostraEmpresa&id=${ empresa.id }">Editar </a>
-                    <a href="./browse?action=RemoveEmpresa&id=${ empresa.id }">| Remover</a>
+                <strong>${empresa.nome}</strong> - CNPJ: ${empresa.cnpj} | Abertura de Conta: <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>
+                        <button>
+                            <a href="./browse?action=MostraEmpresa&id=${ empresa.id }"> Editar </a>
+                        </button>
+
+                        <button>
+                            <a href="./browse?action=RemoveEmpresa&id=${ empresa.id }"> Remover </a>
+                        </button>
             </li>
 
         </c:forEach>
     </ul>
 <p></p>
 <br/>
-<footer>Vou ficar devendo o front end dessa pagina por hora... </footer>
+</fieldset>
+
 </body>
 </html>

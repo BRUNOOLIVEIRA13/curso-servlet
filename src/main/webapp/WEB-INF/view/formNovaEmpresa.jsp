@@ -7,23 +7,37 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Cadastro</title>
+    <title>Cadastro de Empresas</title>
+
 </head>
 <body>
     <c:import url="logout-parcial.jsp" />
 
-    <form action="${ linkMainServlet }" method="post">
+    <main class="animate-appear with-sidebar">
+        <form action="${ linkMainServlet }" method="post">
+            <fieldset>
+                <legend>Cadastro de Empresa</legend>
+                <div class="input-block">
+                    <label for="nome">Razão Social:</label>
+                    <input type="text" id="nome" name="nome" required />
+                </div>
+                <p></p>
+                <div class="input-block">
+                    <label for="cnpj">CNPJ:</label>
+                    <input id="cnpj" name="cnpj" maxLength = 18 required />
+                </div>
+                <p></p>
+                <div class="input-block">
+                    <label for="data">Data de Abertura:</label>
+                    <input id="data" name="data" required />
+                </div>
+                <p></p>
+                <input type="hidden" name="action" value="NovaEmpresa" />
+                <button type="submit" class="primary-button">Confirmar</button>
 
-        Nome: <input type="text" name="nome" />
-        CNPJ: <input type="text" name="cnpj">
-        Data de Abertura: <input type="text" name="data" />
-        <input type="hidden" name="action" value="NovaEmpresa" />
+            </fieldset>
+        </form>
+    </main>
 
-        <input type="submit">
-
-    </form>
-<p></p>
-<br/>
-<footer>Vou ficar devendo o front end dessa pagina por hora... </footer>
 </body>
 </html>
