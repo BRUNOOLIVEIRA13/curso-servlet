@@ -1,25 +1,25 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:url value="/novaEmpresa" var="linkServletNovaEmpresa"/>
+<c:url value="/browse" var="linkMainServlet"/>
 
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario de Cadastro</title>
+    <title>Login</title>
 </head>
 <body>
-<a href="index.jsp">Voltar</a>
-<br/><br/>
+    <a href="../../gerenciador/">Voltar</a>
+    <br/><br/>
 
-    <form action="${ linkServletNovaEmpresa }" method="post">
+    <form action="${ linkMainServlet }" method="post">
 
-        Nome: <input type="text" name="nome" />
-        CNPJ: <input type="text" name="cnpj">
-        Data de Abertura: <input type="text" name="data" />
+        E-mail: <input type="text" name="login" />
+        Senha: <input type="password" name="senha" />
+        <input type="hidden" name="action" value="Login" />
 
-      <input type="submit">
+        <input type="submit">
 
     </form>
 <p></p>
