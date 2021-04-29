@@ -11,6 +11,16 @@ import java.io.IOException;
 public class AutorizacaoFilter implements Filter {
 
     @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        Filter.super.init(filterConfig);
+    }
+
+    @Override
+    public void destroy() {
+        Filter.super.destroy();
+    }
+
+    @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws ServletException, IOException {
 
         //Precisa ser feito um cast, pois o filter é um tipo mais generics de servlet e precisa ser HttpServlet (mais especifica);
