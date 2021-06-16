@@ -56,7 +56,7 @@ Esses códigos foram desenvolvidos com as seguintes tecnologias:
 
 :coffee: Através da arquitetura MVC, nós definimos bem as nossas camadas e criamos nosos próprio framework, com HTML simples no JSP, mas com todos os recursos - como um *clutch* completo e autenticação e autorização com filtros. 
 
-📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunooliveira13/)
+📫 Espero que goste, qualquer dúvida ou sugestão me encontro a disposição! [LinkedIn](https://www.linkedin.com/in/brunoliveiradev/)
 
 <br>
 
